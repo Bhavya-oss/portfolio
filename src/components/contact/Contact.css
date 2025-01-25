@@ -1,0 +1,126 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 10%;
+}
+
+.contact-section {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+  gap: 20px;
+}
+
+.contact-text h3 {
+  font-size: 50px;
+  font-weight: 700;
+  background: linear-gradient(270deg, #df8908 80%, #b415ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-text p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #d8d8d8;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: #d8d8d8;
+  font-size: 34px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.contact-form {
+  display: flex;
+  flex-basis: 55%;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+}
+
+.contact-form label {
+  color: #d8d8d8;
+}
+
+.contact-form input,
+textarea {
+  padding: 18px 0px 18px 20px;
+  border-radius: 4px;
+  background: #32323c;
+  color: #a0a0a0;
+  font-size: 18px;
+  width: 100%;
+  border: none;
+}
+
+.contact-submit {
+  border: none;
+  color: #fff;
+  border-radius: 50px;
+  background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
+  font-size: 18px;
+  padding: 18px 40px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.contact-submit:hover {
+  transform: scale(1.1);
+}
+
+.success-message {
+  color: green;
+}
+
+.failur-message {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    gap: 40px;
+    margin: 50px 6%;
+    align-items: start;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .contact-text h3 {
+    font-size: 35px;
+  }
+
+  .contact-detail {
+    gap: 12px;
+  }
+
+  .contact-form label {
+    font-size: 14px;
+  }
+
+  .submit-btutton {
+    display: flex;
+    justify-content: end;
+  }
+}

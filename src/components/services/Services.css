@@ -1,0 +1,112 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 70px 10% 10% 150px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid green;
+  position: relative;
+  /* z-index: 1; */
+  background-color: #161513;
+  transition: all 0.5s;
+}
+
+.service-card:hover {
+  /* transform: scale(1.05); */
+  /* background: linear-gradient(45deg, #3f0028, #582300); */
+  border: 2px solid #ff00ff;
+}
+
+.service-card h4 {
+  font-size: 30px;
+  font-weight: 800;
+  background: linear-gradient(270deg, #df8908 50%, #b415ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-card ul {
+  font-size: 16px;
+  line-height: 2;
+  color: #d4d4d4;
+  list-style-position: inside;
+}
+
+.service-card::after,
+.service-card::before {
+  --angle: 0deg;
+
+  content: "";
+
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--angle),
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  border-radius: 10px;
+  animation: rotate 1.6s infinite;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+.service-card:hover::after,
+.service-card:hover::before {
+  opacity: 0; /* Hide the conic gradient on hover */
+}
+
+@media (max-width: 768px) {
+  .services {
+    align-items: start;
+    gap: 70px;
+    margin: 20px 6%;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card h4 {
+    font-size: 26px;
+  }
+}

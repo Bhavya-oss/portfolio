@@ -1,0 +1,149 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 70px 10%;
+}
+
+.title-box {
+  position: relative;
+}
+
+.title-box h2 {
+  padding: 0 30px;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.title-box img {
+  position: absolute;
+  width: 160px;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.about-section {
+  display: flex;
+  gap: 60px;
+}
+
+.about-section img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.about-section .text {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.about-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.about-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.progress-both {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: 0.5s;
+}
+
+.progress-both:hover {
+  transform: scale(1.05);
+}
+
+.progress-both hr {
+  height: 8px;
+  border-radius: 50px;
+  background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
+  border: none;
+}
+
+.about-horizantal {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.about-horizant {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.about-horizant:hover {
+  transform: scale(1.05);
+}
+
+.about-horizant h2 {
+  font-size: 40px;
+  font-weight: 700;
+  background: linear-gradient(270deg, #df8908 50.41%, #b415ff 90.25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-horizant p {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .about {
+    gap: 50px;
+    align-items: start;
+    margin: 50px 6%;
+  }
+
+  .title-box h2 {
+    font-size: 40px;
+    padding: 0;
+  }
+
+  .title-box img {
+    width: 100px;
+    right: -40px;
+  }
+
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-section .image {
+    display: none;
+  }
+
+  .about-section .about-paragraph {
+    line-height: 25px;
+  }
+
+  .progress-both p {
+    font-size: 13px;
+  }
+
+  .about-horizant p {
+    font-size: 13px;
+  }
+
+  .about-horizant h2 {
+    font-size: 30px;
+  }
+}
